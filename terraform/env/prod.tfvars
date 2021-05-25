@@ -22,3 +22,14 @@ eks_instance_type = "m5.xlarge"
 # MongoDB
 mongo_cluster_name = "picpay-mongo"
 mongo_instance_count = 3
+
+# PostgreSQL
+postgres_family           = "postgres9.6"
+postgres_version          = "9.6.20"
+postgres_size             = "db.m5.large"
+postgres_storage_size     = "40"
+postgres_max_storage_size = "80"
+postgres_port             = "5432"
+rds_name                  = "picpayprod"
+rds_db_username           = "picpay-admin"
+rds_db_password           = "Zv87ZwhgJ"

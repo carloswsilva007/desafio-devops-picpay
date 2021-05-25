@@ -71,3 +71,48 @@ variable "mongo_instance_count" {
   description = "Quantidade de instancias no cluster"
   type        = string
 }
+
+variable "postgres_family" {
+  description = "Familia do postgreSQL"
+  type        = string
+}
+
+variable "postgres_version" {
+  description = "Versao do postgreSQL"
+  type        = string
+}
+
+variable "postgres_size" {
+  description = "Classe de instancia do RDS"
+  type        = string
+}
+
+variable "postgres_storage_size" {
+  description = "Tamanho do armazenamento do RDS"
+  type        = string
+}
+
+variable "postgres_max_storage_size" {
+  description = "Tamanho maximo em que pode ser escalado"
+  type        = string
+}
+
+variable "postgres_port" {
+  description = "Porta que o PostgreSQL ira rodar"
+  type        = string
+}
+
+variable "rds_name" {
+  description = "Nome do RDS"
+  type        = string
+}
+
+variable "rds_db_username" {
+  description = "Usuario 'root' para conectar ao banco"
+  type        = string
+}
+
+variable "rds_db_password" {
+  description = "Senha do usuario 'root'"
+  type        = string
+}

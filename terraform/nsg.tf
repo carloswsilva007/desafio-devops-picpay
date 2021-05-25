@@ -46,3 +46,31 @@ module "mongo_servers_sg" {
     },
   ]
 }
+
+module "rds_servers_sg" {
+  source = "terraform-aws-modules/security-group/aws"
+
+  name        = "RDS PostgreSQL Servers"
+  description = "Grupos de seguranca para RDS postgres"
+  vpc_id      = data.aws_vpc.picpay.id
+
+  ingress_with_cidr_blocks = [
+    {
+      rule        = "postgresql-tcp"
+      description = "Acesso PostgreSQL somente pela subnet publica"
+      cidr_blocks = local.vpc_public_cidr
+    },
+    {
+      rule        = "postgresql-tcp"
+      description = "Acesso PostgreSQL somente pela subnet publica"
+      cidr_blocks = local.vpc_private_cidr
+    },
+  ]
+
+  egress_with_cidr_blocks = [
+    {
+      rule : "all-all"
+    },
+  ]
+}
+
