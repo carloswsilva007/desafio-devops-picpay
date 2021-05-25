@@ -34,6 +34,20 @@ variable "rabbitmq_password" {
 }
 
 variable "s3_bucket_name" {
-  description = "Nome do s3 bucket do frontend"
+  description = "Nome do bucket s3 do frontend"
+  type        = string
+}
+variable "eks_name" {
+  description = "Nome do cluster de Kubernetes"
+  type        = string
+}
+
+variable "eks_version" {
+  description = "Versão do Kubernetes"
+  type        = string
+}
+
+variable "eks_instance_type" {
+  description = "Tamanho das maquinas workers do cluster"
   type        = string
 }

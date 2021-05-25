@@ -10,3 +10,8 @@ rabbitmq_password      = "c5jDStwS5"
 
 # S3
 s3_bucket_name = "picpay-frontend"
+
+# Kubernetes
+eks_name = "picpay-k8s"
+eks_version = "1.19"
+eks_instance_type = "m5.xlarge"
