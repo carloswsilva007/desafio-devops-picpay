@@ -72,6 +72,11 @@ variable "mongo_instance_count" {
   type        = string
 }
 
+variable "mongo_instance_type" {
+  description = "Tipo da maquina do mongo que sera usado"
+  type        = string
+}
+
 variable "postgres_family" {
   description = "Familia do postgreSQL"
   type        = string

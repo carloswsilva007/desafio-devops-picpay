@@ -22,6 +22,7 @@ eks_instance_type = "m5.xlarge"
 # MongoDB
 mongo_cluster_name = "picpay-mongo"
 mongo_instance_count = 3
+mongo_instance_type = "m5.large"
 
 # PostgreSQL
 postgres_family           = "postgres9.6"
