@@ -24,3 +24,25 @@ module "amazonmq_rabbit_sg" {
     },
   ]
 }
+
+module "mongo_servers_sg" {
+  source = "terraform-aws-modules/security-group/aws"
+
+  name        = "Mongo Servers"
+  description = "Grupos de seguranca para mongo"
+  vpc_id      = data.aws_vpc.picpay.id
+
+  ingress_with_cidr_blocks = [
+    {
+      rule        = "mongodb-27017-tcp"
+      description = "Acesso do Mongo somente pela subnet publica"
+      cidr_blocks = local.vpc_public_cidr
+    },
+  ]
+
+  egress_with_cidr_blocks = [
+    {
+      rule : "all-all"
+    },
+  ]
+}

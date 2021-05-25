@@ -1,5 +1,8 @@
+# gerais
 region = "sa-east-1"
 vpc_name = "picpay"
+ami = "codigo-do-amazon-linux-2"
+key_name = "picpay-pem"
 
 # RabbitMQ
 rabbitmq_name          = "picpay"
@@ -15,3 +18,7 @@ s3_bucket_name = "picpay-frontend"
 eks_name = "picpay-k8s"
 eks_version = "1.19"
 eks_instance_type = "m5.xlarge"
+
+# MongoDB
+mongo_cluster_name = "picpay-mongo"
+mongo_instance_count = 3

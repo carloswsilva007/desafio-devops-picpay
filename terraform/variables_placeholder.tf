@@ -8,6 +8,16 @@ variable "vpc_name" {
   type        = string
 }
 
+variable "ami" {
+  description = "AMI que ira ser utilizado nos servidores"
+  type        = string
+}
+
+variable "key_name" {
+  description = "Nome da chave para autenticar nos servidores"
+  type        = string
+}
+
 variable "rabbitmq_name" {
   description = "Nome do RabbitMQ (nome do cluster)"
   type        = string
@@ -49,5 +59,15 @@ variable "eks_version" {
 
 variable "eks_instance_type" {
   description = "Tamanho das maquinas workers do cluster"
+  type        = string
+}
+
+variable "mongo_cluster_name" {
+  description = "Nome do cluster de mongo"
+  type        = string
+}
+
+variable "mongo_instance_count" {
+  description = "Quantidade de instancias no cluster"
   type        = string
 }
